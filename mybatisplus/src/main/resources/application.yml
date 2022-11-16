@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis_plus?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+     # 配置MyBatis-Plus操作表的默认前缀
+      table-prefix: t_
+      id-type: auto
+  type-aliases-package: com.example.mybatisplus.pojo
+  #扫描通用枚举的包
+  type-enums-package: com.example.mybatisplus.enums
